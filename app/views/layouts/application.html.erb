@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsStupidCoaching</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>RailsStupidCoaching</title>
+  <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+
+  <form action="/answer">
+    <label for="question">Speak to your coach</label>
+    <input type="text" id="question" name="question" placeholder="What do you want to ask your coach?">
+    <input type="submit" value="Go on!">
+  </form>
+  <%= yield %>
+</body>
 </html>
+
+<!-- http://localhost:3000/answer?question=Hello -->
+
+<!-- http://localhost:3000/question?question=hello
+ -->
